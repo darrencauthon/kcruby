@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   def index
-    @members = Member.find(:all, :order => 'ruby_since')
+    @members = Member.all
   end
 
   def show

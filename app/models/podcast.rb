@@ -1,5 +1,5 @@
 class Podcast < ActiveRecord::Base
-  attr_accessible :title, :description, :video_url, :thumbnail_medium, :thumbnail_large, :duration, :size, :upload_date, :width, :height, :private_video
+  #attr_accessible :title, :description, :video_url, :thumbnail_medium, :thumbnail_large, :duration, :size, :upload_date, :width, :height, :private_video
 
   # validates_presence_of :upload_date, :video_url
 

@@ -18,15 +18,13 @@ Kcruby::Application.routes.draw do
     end
   end
   
-  match '/auth/:provider/callback', :to => 'sessions#create'
-  match '/auth/failure', :to => 'sessions#fail'
+  post '/auth/:provider/callback', :to => 'sessions#create'
+  post '/auth/failure', :to => 'sessions#fail'
   
   root :to => "home#index"
   
-  match "/login" => redirect("/auth/twitter"), :as => :login
-  match "/logout" => "sessions#destroy", :as => :logout
-
-  match '/ping' => 'ping#ping'
+  get "/login" => redirect("/auth/twitter"), :as => :login
+  get "/logout" => "sessions#destroy", :as => :logout
   
 
   # The priority is based upon order of creation:

@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :member_id, :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders, :admin
+  #attr_accessible :member_id, :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders, :admin
 
   # validates_presence_of :name, :neighborood, :ruby_since
   has_many :projects
