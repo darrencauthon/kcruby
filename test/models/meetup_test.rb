@@ -35,6 +35,21 @@ EOF
         meetup.all_members.count.must_equal 3
       end
 
+      it "should include details for the first person" do
+        first = meetup.all_members[0]
+        first[:name].must_equal 'Travis A'
+      end
+
+      it "should include details for the second person" do
+        second = meetup.all_members[1]
+        second[:name].must_equal 'Troy T'
+      end
+
+      it "should include details for the third person" do
+        third = meetup.all_members[2]
+        third[:name].must_equal 'Tyler'
+      end
+
     end
 
   end

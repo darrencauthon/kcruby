@@ -3,6 +3,8 @@ class Meetup
   end
 
   def all_members
-    [1, 2, 3]
+    [ { name: 'Travis A' }, 
+      { name: 'Troy T' }, 
+      { name: 'Tyler' } ]
   end
 end
