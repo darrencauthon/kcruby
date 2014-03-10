@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -8,11 +9,11 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110901172714) do
+ActiveRecord::Schema.define(version: 20110901172714) do
 
-  create_table "events", :force => true do |t|
+  create_table "events", force: true do |t|
     t.string   "name"
     t.datetime "time"
     t.text     "venue_name"
@@ -28,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20110901172714) do
     t.string   "event_url"
   end
 
-  create_table "members", :force => true do |t|
+  create_table "members", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.text     "about"
@@ -46,10 +47,10 @@ ActiveRecord::Schema.define(:version => 20110901172714) do
     t.boolean  "email_reminders"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "admin",           :default => false, :null => false
+    t.boolean  "admin",           default: false, null: false
   end
 
-  create_table "podcasts", :force => true do |t|
+  create_table "podcasts", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.string   "video_url"
@@ -62,10 +63,10 @@ ActiveRecord::Schema.define(:version => 20110901172714) do
     t.string   "thumbnail_large"
     t.string   "width"
     t.string   "height"
-    t.boolean  "private_video",    :default => false
+    t.boolean  "private_video",    default: false
   end
 
-  create_table "projects", :force => true do |t|
+  create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
