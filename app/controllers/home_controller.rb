@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @podcasts = Podcast.public.desc.recent
+    @podcasts = Podcast.recent
   end
 end
