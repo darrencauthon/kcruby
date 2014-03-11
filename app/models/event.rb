@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
   # validates_presence_of :name, :event_url, :time => true
   
   def self.next
-    Event.where("time >= ?", Time.now).sort { |x| x.time }.first
+    Event.all.select { |x| x.time >= Date.today }.first
   end
   
   def self.get_meetup
