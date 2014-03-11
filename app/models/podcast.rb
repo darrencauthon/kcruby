@@ -7,7 +7,7 @@ class Podcast < ActiveRecord::Base
     u = URI.parse("http://vimeo.com/api/v2/wesgarrison/videos.json")
     response = Net::HTTP.get(u)
     JSON.parse(response).each do |pc|
-      podcast = Podcast.where(pc["id"]).first || Podcast.create
+      podcast = Podcast.where(id: pc["id"]).first || Podcast.create
       podcast.id                                 = pc["id"]
       if podcast.title.blank?
         podcast.title = pc["title"]
